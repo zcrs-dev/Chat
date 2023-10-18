@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="ChatServer"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\ChatNetworking\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Boost-1.74.0\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_headers-1.74.0\;CMake Files\ChatClient\;CMake Files\ChatServer\;CMake Files\ChatBinary\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/olsson/devel/CLion/Chat/cmake-build-debug/ChatServer"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/olsson/devel/CLion/Chat/cmake-build-debug/ChatServer/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/olsson/devel/CLion/Chat/cmake-build-debug/ChatServer/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/olsson/devel/CLion/Chat/cmake-build-debug/ChatServer/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/olsson/devel/CLion/Chat/cmake-build-debug/ChatServer/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ChatServer">
+				<Option output="/home/olsson/devel/CLion/Chat/cmake-build-debug/ChatServer/ChatServer" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/olsson/devel/CLion/Chat/cmake-build-debug/ChatServer"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/olsson/devel/CLion/Chat/ChatServer/ChatNetworking"/>
+					<Add directory="/home/olsson/devel/CLion/Chat/ChatNetworking/include"/>
+					<Add directory="/usr/include/c++/12"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/12"/>
+					<Add directory="/usr/include/c++/12/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/12/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/olsson/devel/CLion/Chat/cmake-build-debug/ChatServer/Makefile&quot;  VERBOSE=1 ChatServer"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/olsson/devel/CLion/Chat/cmake-build-debug/ChatServer/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/olsson/devel/CLion/Chat/cmake-build-debug/ChatServer/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/olsson/devel/CLion/Chat/cmake-build-debug/ChatServer/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ChatServer/fast">
+				<Option output="/home/olsson/devel/CLion/Chat/cmake-build-debug/ChatServer/ChatServer" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/olsson/devel/CLion/Chat/cmake-build-debug/ChatServer"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/olsson/devel/CLion/Chat/ChatServer/ChatNetworking"/>
+					<Add directory="/home/olsson/devel/CLion/Chat/ChatNetworking/include"/>
+					<Add directory="/usr/include/c++/12"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/12"/>
+					<Add directory="/usr/include/c++/12/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/12/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/olsson/devel/CLion/Chat/cmake-build-debug/ChatServer/Makefile&quot;  VERBOSE=1 ChatServer/fast"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/olsson/devel/CLion/Chat/cmake-build-debug/ChatServer/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/olsson/devel/CLion/Chat/cmake-build-debug/ChatServer/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/olsson/devel/CLion/Chat/cmake-build-debug/ChatServer/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/olsson/devel/CLion/Chat/ChatServer/main.cpp">
+			<Option target="ChatServer"/>
+		</Unit>
+		<Unit filename="/home/olsson/devel/CLion/Chat/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/olsson/devel/CLion/Chat/ChatNetworking/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\ChatNetworking\"/>
+		</Unit>
+		<Unit filename="/home/olsson/devel/CLion/Chat/../../../../../usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Boost-1.74.0\"/>
+		</Unit>
+		<Unit filename="/home/olsson/devel/CLion/Chat/../../../../../usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Boost-1.74.0\"/>
+		</Unit>
+		<Unit filename="/home/olsson/devel/CLion/Chat/../../../../../usr/lib/x86_64-linux-gnu/cmake/boost_headers-1.74.0/boost_headers-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_headers-1.74.0\"/>
+		</Unit>
+		<Unit filename="/home/olsson/devel/CLion/Chat/../../../../../usr/lib/x86_64-linux-gnu/cmake/boost_headers-1.74.0/boost_headers-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_headers-1.74.0\"/>
+		</Unit>
+		<Unit filename="/home/olsson/devel/CLion/Chat/ChatClient/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\ChatClient\"/>
+		</Unit>
+		<Unit filename="/home/olsson/devel/CLion/Chat/ChatServer/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\ChatServer\"/>
+		</Unit>
+		<Unit filename="/home/olsson/devel/CLion/Chat/ChatBinary/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\ChatBinary\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

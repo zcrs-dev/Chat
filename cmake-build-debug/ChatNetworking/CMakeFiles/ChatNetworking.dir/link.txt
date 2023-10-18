@@ -1,0 +1,2 @@
+/usr/bin/ar qc libChatNetworking.a CMakeFiles/ChatNetworking.dir/src/client/tcp_client.cpp.o CMakeFiles/ChatNetworking.dir/src/server/tcp_connection.cpp.o CMakeFiles/ChatNetworking.dir/src/server/tcp_server.cpp.o
+/usr/bin/ranlib libChatNetworking.a
