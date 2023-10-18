@@ -5,7 +5,7 @@
 		<Option title="ChatNetworking"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\ChatNetworking\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Boost-1.74.0\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_headers-1.74.0\;CMake Files\ChatClient\;CMake Files\ChatServer\;CMake Files\ChatBinary\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\ChatNetworking\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Boost-1.74.0\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_headers-1.74.0\;CMake Files\ChatClient\;CMake Files\ChatServer\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/olsson/devel/CLion/Chat/cmake-build-debug/ChatNetworking"/>
@@ -96,9 +96,6 @@
 		</Unit>
 		<Unit filename="/home/olsson/devel/CLion/Chat/ChatServer/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\ChatServer\"/>
-		</Unit>
-		<Unit filename="/home/olsson/devel/CLion/Chat/ChatBinary/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\ChatBinary\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

@@ -8,7 +8,6 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
   "/home/olsson/devel/CLion/Chat/CMakeLists.txt"
-  "/home/olsson/devel/CLion/Chat/ChatBinary/CMakeLists.txt"
   "/home/olsson/devel/CLion/Chat/ChatClient/CMakeLists.txt"
   "/home/olsson/devel/CLion/Chat/ChatNetworking/CMakeLists.txt"
   "/home/olsson/devel/CLion/Chat/ChatServer/CMakeLists.txt"
@@ -56,7 +55,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "ChatNetworking/CMakeFiles/CMakeDirectoryInformation.cmake"
   "ChatClient/CMakeFiles/CMakeDirectoryInformation.cmake"
   "ChatServer/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "ChatBinary/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -64,5 +62,4 @@ set(CMAKE_DEPEND_INFO_FILES
   "ChatNetworking/CMakeFiles/ChatNetworking.dir/DependInfo.cmake"
   "ChatClient/CMakeFiles/ChatClient.dir/DependInfo.cmake"
   "ChatServer/CMakeFiles/ChatServer.dir/DependInfo.cmake"
-  "ChatBinary/CMakeFiles/ChatBinary.dir/DependInfo.cmake"
   )

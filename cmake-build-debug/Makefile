@@ -155,19 +155,6 @@ ChatServer/fast:
 	$(MAKE) $(MAKESILENT) -f ChatServer/CMakeFiles/ChatServer.dir/build.make ChatServer/CMakeFiles/ChatServer.dir/build
 .PHONY : ChatServer/fast
 
-#=============================================================================
-# Target rules for targets named ChatBinary
-
-# Build rule for target.
-ChatBinary: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ChatBinary
-.PHONY : ChatBinary
-
-# fast build rule for target.
-ChatBinary/fast:
-	$(MAKE) $(MAKESILENT) -f ChatBinary/CMakeFiles/ChatBinary.dir/build.make ChatBinary/CMakeFiles/ChatBinary.dir/build
-.PHONY : ChatBinary/fast
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -176,7 +163,6 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... ChatBinary"
 	@echo "... ChatClient"
 	@echo "... ChatNetworking"
 	@echo "... ChatServer"

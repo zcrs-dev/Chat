@@ -6,5 +6,3 @@ add_subdirectory(ChatNetworking)
 
 add_subdirectory(ChatClient)
 add_subdirectory(ChatServer)
-
-add_subdirectory(ChatBinary)

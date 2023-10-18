@@ -9,6 +9,3 @@
 /home/olsson/devel/CLion/Chat/cmake-build-debug/ChatServer/CMakeFiles/ChatServer.dir
 /home/olsson/devel/CLion/Chat/cmake-build-debug/ChatServer/CMakeFiles/edit_cache.dir
 /home/olsson/devel/CLion/Chat/cmake-build-debug/ChatServer/CMakeFiles/rebuild_cache.dir
-/home/olsson/devel/CLion/Chat/cmake-build-debug/ChatBinary/CMakeFiles/ChatBinary.dir
-/home/olsson/devel/CLion/Chat/cmake-build-debug/ChatBinary/CMakeFiles/edit_cache.dir
-/home/olsson/devel/CLion/Chat/cmake-build-debug/ChatBinary/CMakeFiles/rebuild_cache.dir
