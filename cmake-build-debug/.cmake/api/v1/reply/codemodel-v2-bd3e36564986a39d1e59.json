@@ -1,0 +1,195 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4
+					],
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.26"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "ChatNetworking",
+					"jsonFile" : "directory-ChatNetworking-Debug-fb70f88d8c007fbb2dc8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.25"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "ChatNetworking",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "ChatClient",
+					"jsonFile" : "directory-ChatClient-Debug-d45e0902e4cf282c44f3.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.25"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 2,
+					"source" : "ChatClient",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "ChatServer",
+					"jsonFile" : "directory-ChatServer-Debug-19464660019f26e381ab.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.25"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 3,
+					"source" : "ChatServer",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "ChatBinary",
+					"jsonFile" : "directory-ChatBinary-Debug-4939dc4f699cb87403bd.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.25"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 4,
+					"source" : "ChatBinary",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Chat"
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "ChatNetworking",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "ChatClient",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						3
+					],
+					"name" : "ChatServer",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						4
+					],
+					"name" : "ChatBinary",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 4,
+					"id" : "ChatBinary::@96572f0fa1509ecdfed8",
+					"jsonFile" : "target-ChatBinary-Debug-e9d9b40873a152e5ca7d.json",
+					"name" : "ChatBinary",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "ChatClient::@3e2ec28e7c205813de33",
+					"jsonFile" : "target-ChatClient-Debug-42d981cd2c5fbab0e63c.json",
+					"name" : "ChatClient",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "ChatNetworking::@31b0294ffb4a717e8b76",
+					"jsonFile" : "target-ChatNetworking-Debug-5857f2ebbc5791bcddbe.json",
+					"name" : "ChatNetworking",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "ChatServer::@8b869333bf554707d8e9",
+					"jsonFile" : "target-ChatServer-Debug-d8318ed51d0dfbebc085.json",
+					"name" : "ChatServer",
+					"projectIndex" : 3
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/olsson/devel/CLion/Chat/cmake-build-debug",
+		"source" : "/home/olsson/devel/CLion/Chat"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 5
+	}
+}
