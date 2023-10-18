@@ -2,6 +2,7 @@
 #include <boost/asio.hpp>
 #include <memory> //where std pter is
 #include <queue>
+#include <vector>
 
 
 namespace Chat
@@ -9,7 +10,11 @@ namespace Chat
     using boost::asio::ip::tcp;
     namespace io = boost::asio;
     //can pass a string too
-    using MessageHandler = std::function<void(std::string)>;
+    //using MessageHandler = std::function<void(std::string)>;
+
+    //pass binary data
+    using MessageHandler = std::function<void(const std::vector<uint8_t>&)>;
+
     using ErrorHandler = std::function<void()>;
 
     //template that doesn't do anything for now
@@ -37,7 +42,8 @@ namespace Chat
         void Start(MessageHandler&& messageHandler, ErrorHandler&& errorHandler);
 
         //be able to send the client new messages; post message to client
-        void Post(const std::string& message);
+//        void Post(const std::string& message);
+        void Post(const std::vector<uint8_t>& data);
 
     private:
         //tcp connection constructor; provide a factory method specifically so that these are all shared pointers fall out of ioContext
@@ -59,7 +65,7 @@ namespace Chat
         tcp::socket _socket;
         std::string _username;
 
-        std::queue<std::string> _outgoingMessages;
+        std::queue<std::vector<uint8_t>> _outgoingData;
 
         //with max so it doesn't go on forever
         io::streambuf _streamBuf {65536};

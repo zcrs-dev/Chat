@@ -1,19 +1,19 @@
 #pragma once
 #include <boost/asio.hpp>
 #include <queue>
+#include <vector>
 
 namespace Chat {
     namespace io = boost::asio;
 
-    using MessageHandler = std::function<void(std::string)>;
-
+    using MessageHandler = std::function<void(std::vector<uint8_t>&)>;
 
     class TCPClient {
     public:
         TCPClient(const std::string& address, int port);
         void Run();
         void Stop();
-        void Post(const std::string& message);
+        void Post(const std::vector<uint8_t>& data);
 
     private:
         void asyncRead();
@@ -35,6 +35,6 @@ namespace Chat {
 
         io::streambuf _streamBuf{65536};
 
-        std::queue<std::string> _outgoingMessages {};
+        std::queue<std::vector<uint8_t>> _outgoingData {};
     };
 }

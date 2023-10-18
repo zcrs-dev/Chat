@@ -22,13 +22,12 @@ namespace Chat {
         return 0;
     }
 
-    void TCPServer::Broadcast(const std::string &message) {
-
-        for (auto& connection : _connections){Thank
-            connection->Post(message);
+    //void TCPServer::Broadcast(const std::string &message) {
+    void TCPServer::Broadcast(const std::vector<uint8_t> &data) {
+        for (auto& connection : _connections){
+            connection->Post(data);
         }
     }
-
     void TCPServer::startAccept()
     {
         //create a new socket object waiting on that io content
@@ -41,7 +40,7 @@ namespace Chat {
                                [this](const boost::system::error_code& error){
 
                                    //start a connection move clears the optional into wherever you set it.
-                                   auto connection = TCPConnection::Create(std::move(*_socket));/home/olsson/devel/CLion/Chat
+                                   auto connection = TCPConnection::Create(std::move(*_socket));
 
                                    if (OnJoin) {
                                        OnJoin(connection);
@@ -54,8 +53,9 @@ namespace Chat {
 
 
                                    if(!error) {
-                                       connection->Start([this](const std::string& message){
-                                                             if (OnClientMessage) OnClientMessage(message);},
+                                       //connection->Start([this](const std::string& message){
+                                         connection->Start([this](const std::vector<uint8_t>& data) {
+                                             if (OnClientMessage) OnClientMessage(data);},
                                                          [&, weak = std::weak_ptr(connection)] {
                                                              //locking pointer to make sure it's correct and if it was properly locked, and we found the same connection obj
                                                              //within our connection set, then we check if onLeave is defined and we call it

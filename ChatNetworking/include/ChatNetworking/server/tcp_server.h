@@ -5,6 +5,7 @@
 #include <unordered_set>
 #include <functional>
 
+
 namespace Chat {
     namespace io = boost::asio;
 
@@ -21,19 +22,26 @@ namespace Chat {
         using OnJoinHandler = std::function<void(TCPConnection::pointer)>;
         using OnLeaveHandler = std::function<void(TCPConnection::pointer)>;
 
-
-        using OnClientMessageHandler = std::function<void(std::string)>;
+        //pass string message
+        // using OnClientMessageHandler = std::function<void(std::string)>;
+        //pass binary information unint8_t -> unsigned char
+        using OnClientMessageHandler = std::function<void(const std::vector<uint8_t>&)>;
 
     public:
         //TCP Server constructor
         TCPServer(IPV ipv, int port);
         int Run();
 
-        //  broadcast
-        void Broadcast(const std::string& message);
+        //  broadcast message string
+        //void Broadcast(const std::string& message);
+        //Updated to send binary info
+        void Broadcast(const std::vector<uint8_t>& data);
 
     private:
         void startAccept();
+        //receive and handle binary information
+        void handledRead(TCPConnection::pointer client, const boost::system::error_code& error);
+
 
     public:
         OnJoinHandler OnJoin;

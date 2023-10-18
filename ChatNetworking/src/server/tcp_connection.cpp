@@ -25,11 +25,12 @@ namespace Chat
         asyncRead();
     }
 
-    void TCPConnection::Post(const std::string &message){
+    //void TCPConnection::Post(const std::string &message){
+    void TCPConnection::Post(const std::vector<uint8_t> &data) {
         //is the queue empty?
-        bool queueIdle = _outgoingMessages.empty();
+        bool queueIdle = _outgoingData.empty();
 
-        _outgoingMessages.push(message);
+        _outgoingData.push(data);
 
         if(queueIdle) {
             asyncWrite();
@@ -57,17 +58,23 @@ namespace Chat
             return;
         }
 
-        //once there is no error
-        std::stringstream message;
-        message << _username << ": " << std::istream(&_streamBuf).rdbuf();
-
-        // rdbuf() consumes bytes on the buffer or if you want to do different things then do something else than rdbuf
+        //for binary data. commented out for strings
+        std::vector<uint8_t> data(bytesTransferred);
+        io::buffer_copy(io::buffer(data), _streamBuf.data(), bytesTransferred);
         _streamBuf.consume(bytesTransferred);
 
-//        std::cout << message.str();
+        //pass the data to the message handler
+        _messageHandler(data);
 
-        //add message handler
-        _messageHandler(message.str());
+//        //once there is no error
+//        std::stringstream message;
+//        message << _username << ": " << std::istream(&_streamBuf).rdbuf();
+//
+//        // rdbuf() consumes bytes on the buffer or if you want to do different things then do something else than rdbuf
+//        _streamBuf.consume(bytesTransferred);
+//
+//        //add message handler
+//        _messageHandler(message.str());
 
         asyncRead();
 
@@ -75,7 +82,7 @@ namespace Chat
     }
     void TCPConnection::asyncWrite() {
 
-        io::async_write(_socket, io::buffer(_outgoingMessages.front()),
+        io::async_write(_socket, io::buffer(_outgoingData.front()),
                         [self = shared_from_this()](boost::system::error_code ec, size_t bytesTransferred){
                             self->onWrite(ec, bytesTransferred);
                         });
@@ -92,9 +99,9 @@ namespace Chat
         }
 
         //remove message from queue
-        _outgoingMessages.pop();
+        _outgoingData.pop();
 
-        if(!_outgoingMessages.empty()){
+        if(!_outgoingData.empty()){
             asyncWrite();
         }
     }

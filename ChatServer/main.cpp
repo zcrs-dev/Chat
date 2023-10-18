@@ -1,23 +1,10 @@
 #include <iostream>
 #include "../ChatNetworking/include/ChatNetworking/server/tcp_server.h"
 #include <fstream>
-
+#include <vector>
 
 int main(int argc, char* argv[])
 {
-    /* all stuff related to binary files */
-
-    std::fstream fout;
-    char x = 'A';
-    fout.open("file.dat", std::ios::out | std::ios::binary);
-    if (fout)
-    {
-        std::cout << "file.dat found";
-        fout.write(&x, sizeof(char));
-        fout.close();
-    } else {
-        std::cout << "error in opening file\n";
-    }
 
     Chat::TCPServer server{Chat::IPV::V4, 1337};
 
@@ -33,11 +20,23 @@ int main(int argc, char* argv[])
     server.OnLeave = [](Chat::TCPConnection::pointer server) {
         std::cout << "User has left the server: " << server->GetUsername() << std::endl;
     };
-    server.OnClientMessage = [&server](const std::string& message) {
-        //Parse the message
-        //do stuff
-        //send message to client
-        server.Broadcast(message); //broadcast to all clients
+    server.OnClientMessage = [&server](const std::vector<uint8_t>& data) {
+        // Handle binary data received from the client
+
+        // Process the binary data here, e.g., save it to a file, send it to other clients, etc.
+        // Currently, I save the binary data to a file.
+        std::fstream fout;
+        fout.open("../received_data.dat", std::ios::out | std::ios::binary);
+        if (fout) {
+//            fout.write(reinterpret_cast<const char*>(data.data()), data.size());
+            fout.write(reinterpret_cast<const char*>(data.data()),data.size());
+            fout.close();
+        } else {
+            std::cerr << "Error in opening file to save received data\n";
+        }
+
+        // Broadcast the binary data to all clients
+        server.Broadcast(data);
     };
 
 
